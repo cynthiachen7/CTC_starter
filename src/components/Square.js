@@ -1,9 +1,11 @@
 import React from "react";
+import { isElement } from "react-dom/test-utils";
 
-const Square = (/*{ parameters }*/) => {
+
+const Square = ( {value, onClick, squareContent}) => {
   return (
     <>
-    // TODO: Create a clickable square that can contain an X or O
+    <button className = "squares ${squareContent}" onClick = {onClick}> {value} </button>
     </>
   );
 };
